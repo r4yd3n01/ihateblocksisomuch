@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@tomphttp/bare-server-node':
-        specifier: 2.0.5
-        version: 2.0.5
+        specifier: 2.0.6
+        version: 2.0.6
       chalk:
         specifier: ^5.2.0
         version: 5.4.1
@@ -30,8 +30,8 @@ importers:
 
 packages:
 
-  '@tomphttp/bare-server-node@2.0.5':
-    resolution: {integrity: sha512-j3355H1hsrsFCkFVePm7ccuUkjQq+Hgj/wnLmCQa2FzBh9B6+zRkd66kFHaYZ4PAOjSX5wHTKQuXVJrnb7GBxg==}
+  '@tomphttp/bare-server-node@2.0.6':
+    resolution: {integrity: sha512-0/Om5xIokkrV3N2LUxAa0tP0prh9lY/HDIXCTs8V2UR89wpM7Xg25ljO5REFSdIJ/HFS81amgKo83Dmbv9znnQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -268,6 +268,9 @@ packages:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
 
+  rate-limiter-flexible@7.4.0:
+    resolution: {integrity: sha512-IJopePGO6HnMWVdeLCihnxXZ0WCW0mxXiU5LE3bZ00GHESsCaAvgD8hN/ATIJeZhnrVdU5cfRyS1uV63Vmc4zg==}
+
   raw-body@3.0.0:
     resolution: {integrity: sha512-RmkhL8CAyCRPXCE28MMH0z2PNWQBNk2Q09ZdxM9IOOXwxwZbN+qbWaatPkdkWIKL2ZVDImrN/pK5HTRz2PcS4g==}
     engines: {node: '>= 0.8'}
@@ -353,13 +356,14 @@ packages:
 
 snapshots:
 
-  '@tomphttp/bare-server-node@2.0.5':
+  '@tomphttp/bare-server-node@2.0.6':
     dependencies:
       async-exit-hook: 2.0.1
       commander: 10.0.1
       dotenv: 16.4.7
       http-errors: 2.0.0
       ipaddr.js: 2.2.0
+      rate-limiter-flexible: 7.4.0
       source-map-support: 0.5.21
       ws: 8.18.1
     transitivePeerDependencies:
@@ -591,6 +595,8 @@ snapshots:
       side-channel: 1.1.0
 
   range-parser@1.2.1: {}
+
+  rate-limiter-flexible@7.4.0: {}
 
   raw-body@3.0.0:
     dependencies:
