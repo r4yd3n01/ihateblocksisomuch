@@ -1,0 +1,18 @@
+[VERSION]
+1.4.2
+
+[RELEASE DATE]
+2026-02-14
+
+[CHANGES]
+- Added Privacy Shield: Advanced tracker blocking and fingerprinting protection
+- Implemented comprehensive Ad Blocker with visual statistics
+- Added Settings Panel: Centralized control for all Ambient features
+- introduced Whitelist System: Allow custom domains to bypass protections
+- Enhanced Settings UI with glassmorphism and smooth animations
+- optimized client.js injection logic for better performance
+- Added real-time stats for blocked ads and trackers in settings
+- Updated README and Devlogs with v1.4.2 information
+
+[NOTES]
+Major security and privacy update. Recommended for all users.

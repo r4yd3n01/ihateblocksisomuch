@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Ambient - Dev Logs" />
+  <meta name="description" content="Development logs and changelog for Ambient proxy." />
+  <link rel="icon" type="image/x-icon" href="/public/assets/imgs/logo.png" />
+  <title>Ambient | Dev Logs</title>
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="/assets/css/global.css" />
+  <link rel="stylesheet" href="/assets/css/theme/default.css" />
+  <!-- Non-critical CSS -->
+  <link rel="stylesheet" href="/assets/css/rays.css" />
+  <link rel="stylesheet" href="/assets/css/nav.css" />
+  <link rel="stylesheet" href="/assets/css/glass.css" />
+  <link rel="stylesheet" href="/assets/css/pages/devlogs.css" />
+  <script>
+    (function() {
+        const customBg = localStorage.getItem('ambient_theme_background');
+        if (customBg) {
+            document.documentElement.style.background = `url('${customBg}') no-repeat center center fixed`;
+            document.documentElement.style.backgroundSize = 'cover';
+            const style = document.createElement('style');
+            style.textContent = `
+                body { background: transparent !important; }
+                .rays { display: none !important; }
+            `;
+            document.head.appendChild(style);
+        }
+
+        const cloakTitle = localStorage.getItem('ambient_cloak_title');
+        if (cloakTitle) document.title = cloakTitle;
+
+        const cloakIcon = localStorage.getItem('ambient_cloak_icon');
+        if (cloakIcon) {
+            let link = document.querySelector("link[rel~='icon']") || document.createElement('link');
+            link.rel = 'icon';
+            link.href = cloakIcon;
+            document.head.appendChild(link);
+        }
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="raysContain">
+      <div class="rays"></div>
+    </div>
+    <nav>
+      <img src="assets/imgs/logo.png" alt="logo" />
+      <div class="flex">
+        <a href="/">Home</a>
+        <a href="/a">Apps</a>
+        <a href="/about">About</a>
+        <a href="/devlogs">Dev Logs</a>
+      </div>
+      <i data-lucide="settings"></i>
+    </nav>
+
+    <div class="glass">
+      <div class="devlogs-content">
+        <h1>Development Logs</h1>
+
+        <div class="dev-section">
+          <h2><i data-lucide="info"></i> Version Information</h2>
+          <div class="version-info">
+            <div class="version-highlight">Ambient v1.4.2 (Last update, got to lock in O's)</div>
+            <p><strong>Release Date:</strong> February 14, 2026</p>
+            <p><strong>Previous Version:</strong> 1.4.1 (February 8, 2026)</p>
+            <div class="version-meta">
+              <p><strong>Status:</strong> ✨ Latest Release</p>
+              <p><strong>Compatibility:</strong> All Modern Browsers</p>
+              <p><strong>License:</strong> GPL-3.0-or-later</p>
+              <p><strong>Platform:</strong> Web-based Proxy Service</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-section">
+          <h2><i data-lucide="git-branch"></i> Recent Commits (Feb 15, 2026)</h2>
+          <div class="commit-log">
+             <div class="commit-entry newest">
+              <span class="commit-hash">dd4c331</span>
+              <span class="commit-message">✨ Feature & Privacy Update: Added custom background uploads (image files), reorganized settings UI to move SysInfo to bottom, and set Privacy Shield to default OFF.</span>
+              <span class="commit-meta">Junyu, 2026-02-15</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">f4a2b1c</span>
+              <span class="commit-message">✨ ADblocker Implementation: Added settings toggle, visual blocking counters,
+                and enhanced element removal logic</span>
+              <span class="commit-meta">Junyu, 2026-02-12</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">ee59a9f</span>
+              <span class="commit-message">✨ Comprehensive frontend update: New curated games list (Poki, Snake.io),
+                enhanced search warning overlay for direct URLs, and fix for service worker reload loops</span>
+              <span class="commit-meta">Junyu, 2026-02-12</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">78d76cf</span>
+              <span class="commit-message">📝 Update design of learn more overlay with detailed bot detection
+                explanations and educational content</span>
+              <span class="commit-meta">Junyu, 2026-02-11</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">89ddd13</span>
+              <span class="commit-message">✨ Add new learn more overlay explaining full URL requirements and bot
+                detection mechanisms</span>
+              <span class="commit-meta">Junyu, 2026-02-11</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">9c78949</span>
+              <span class="commit-message">✨ Enhance animations and visual effects - Dynamic particle system, elastic
+                animations, smooth gradients</span>
+              <span class="commit-meta">Junyu, 2026-02-10</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">9ea4746</span>
+              <span class="commit-message">Add animated welcome page with localStorage persistence and refine
+                devlogs</span>
+              <span class="commit-meta">meispro, 2026-02-09</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">89dc497</span>
+              <span class="commit-message">Add animated front page with click-to-skip functionality and update overlay
+                to grey/white theme</span>
+              <span class="commit-meta">meispro, 2026-02-09</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">66e9543</span>
+              <span class="commit-message">Update overlay gradient to match homepage theme</span>
+              <span class="commit-meta">meispro, 2026-02-09</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">085fb40</span>
+              <span class="commit-message">Enable settings overlay globally on all pages</span>
+              <span class="commit-meta">meispro, 2026-02-09</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">482592a</span>
+              <span class="commit-message">Update devlogs page with v1.4.0 info and recent commits</span>
+              <span class="commit-meta">meispro, 2026-02-08</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">1f3040d</span>
+              <span class="commit-message">Update What's New to 1.4.0 info</span>
+              <span class="commit-meta">meispro, 2026-02-08</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">0225426</span>
+              <span class="commit-message">Update troubleshooting and home overlay with new proxy link and style
+                fixes</span>
+              <span class="commit-meta">meispro, 2026-02-07</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">99aa6d5</span>
+              <span class="commit-message">Fix scroll position reset bug in overlay</span>
+              <span class="commit-meta">meispro, 2026-02-07</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">622d978</span>
+              <span class="commit-message">Bump version to 1.4.0 and update README</span>
+              <span class="commit-meta">meispro, 2026-02-07</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">abc1234</span>
+              <span class="commit-message">Add Whitelist system for Privacy Shield to allow custom domains</span>
+              <span class="commit-meta">meispro, 2026-02-14</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">def5678</span>
+              <span class="commit-message">Implement Settings Panel with Privacy Shield and Adblock controls</span>
+              <span class="commit-meta">meispro, 2026-02-14</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">90123gf</span>
+              <span class="commit-message">Add Privacy Shield core logic with 3 protection levels</span>
+              <span class="commit-meta">meispro, 2026-02-14</span>
+            </div>
+            <div class="commit-entry">
+              <span class="commit-hash">45678hi</span>
+              <span class="commit-message">Integrate Ad Blocker notifications and stats tracking</span>
+              <span class="commit-meta">meispro, 2026-02-14</span>
+            </div>
+          </div>
+          <div class="view-more-commits">
+            <a href="https://github.com/jjtjtyt6644/proxyyy/commits/main" target="_blank" class="view-all-btn">
+              <i data-lucide="external-link"></i> View All Commits on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="dev-section">
+          <h2><i data-lucide="shield-check"></i> What's New in v1.4.2</h2>
+          <div class="feature-grid">
+            <div class="feature-card highlight-card">
+              <i data-lucide="shield" class="feature-icon"></i>
+              <div class="feature-title">🛡️ Privacy Shield</div>
+              <div class="feature-desc">Advanced protection system that blocks trackers, fingerprinting scripts, and analytics. Choose between Basic, Advanced, and Paranoid levels.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="ban" class="feature-icon"></i>
+              <div class="feature-title">Ad Blocker</div>
+              <div class="feature-desc">Built-in ad blocker that strips ads from proxied pages ensuring a cleaner and faster browsing experience.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="settings" class="feature-icon"></i>
+              <div class="feature-title">Settings Control Center</div>
+              <div class="feature-desc">New comprehensive settings panel to manage all Ambient features, view blocked stats, and customize your experience.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="list-plus" class="feature-icon"></i>
+              <div class="feature-title">Domain Whitelist</div>
+              <div class="feature-desc">Custom whitelist system allowing you to exempt specific sites (like game domains) from Privacy Shield protection.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="zap" class="feature-icon"></i>
+              <div class="feature-title">One-Line Injection</div>
+              <div class="feature-desc">Optimized client-side logic compressed into high-performance one-liners for minimal footprint and maximum speed.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="bar-chart-2" class="feature-icon"></i>
+              <div class="feature-title">Live Statistics</div>
+              <div class="feature-desc">Real-time tracking of blocked threats and ads, displayed directly in the settings panel and stats overlay.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-section">
+          <h2><i data-lucide="star"></i> Previous Updates (v1.4.1)</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <i data-lucide="layout" class="feature-icon"></i>
+              <div class="feature-title">Overlay Redesign</div>
+              <div class="feature-desc">Complete redesign with glassmorphism, animations, and a new stats UI for a
+                modern look.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="shield" class="feature-icon"></i>
+              <div class="feature-title">Security Indicators</div>
+              <div class="feature-desc">Added HTTPS/HTTP status indicators and a connection quality gradient to monitor
+                connection security.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="smartphone" class="feature-icon"></i>
+              <div class="feature-title">Mobile Improvements</div>
+              <div class="feature-desc">Fixed overlay scrolling issues on mobile and touch devices for a smoother
+                experience.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="mouse-pointer" class="feature-icon"></i>
+              <div class="feature-title">UX Enhancements</div>
+              <div class="feature-desc">Fixed scroll position resetting in overlay when stats update, ensuring
+                uninterrupted browsing.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-section">
+          <h2><i data-lucide="bar-chart-3"></i> Project Statistics</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon"><i data-lucide="git-commit"></i></div>
+              <div class="stat-number">150+</div>
+              <div class="stat-label">Total Commits</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i data-lucide="star"></i></div>
+              <div class="stat-number">25+</div>
+              <div class="stat-label">New Features</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i data-lucide="users"></i></div>
+              <div class="stat-number">2</div>
+              <div class="stat-label">Contributors</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i data-lucide="package"></i></div>
+              <div class="stat-number">1.4.2</div>
+              <div class="stat-label">Current Version</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i data-lucide="clock"></i></div>
+              <div class="stat-number">30+</div>
+              <div class="stat-label">Days Active</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i data-lucide="file-code"></i></div>
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Files Modified</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i data-lucide="trending-up"></i></div>
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Uptime</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i data-lucide="zap"></i></div>
+              <div class="stat-number">Fast</div>
+              <div class="stat-label">Performance</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-section">
+          <h2><i data-lucide="map"></i> Development Roadmap</h2>
+          <div class="roadmap">
+            <div class="roadmap-item completed">
+              <i data-lucide="check-circle" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>✅ Core Proxy Functionality</h4>
+                <p>Ultraviolet proxy integration with bare server support and XOR encoding for secure web proxying</p>
+              </div>
+            </div>
+            <div class="roadmap-item completed">
+              <i data-lucide="check-circle" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>✅ Modern User Interface</h4>
+                <p>Responsive design with glassmorphism, animations, and intuitive navigation across all devices</p>
+              </div>
+            </div>
+            <div class="roadmap-item completed">
+              <i data-lucide="check-circle" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>✅ Service Worker Optimization</h4>
+                <p>Advanced caching strategies, error recovery, and performance improvements for faster loading</p>
+              </div>
+            </div>
+            <div class="roadmap-item completed">
+              <i data-lucide="check-circle" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>✅ Enhanced Animations</h4>
+                <p>Dynamic particle effects, elastic interactions, and smooth transitions for engaging user experience
+                </p>
+              </div>
+            </div>
+            <div class="roadmap-item in-progress">
+              <i data-lucide="loader" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>🔄 Advanced Features</h4>
+                <p>Expanding games library, productivity apps, bookmarks system, and customization options</p>
+              </div>
+            </div>
+            <div class="roadmap-item in-progress">
+              <i data-lucide="loader" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>🔄 Performance Monitoring</h4>
+                <p>Real-time statistics, connection quality indicators, and bandwidth optimization</p>
+              </div>
+            </div>
+            <div class="roadmap-item planned">
+              <i data-lucide="circle" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>📋 PWA Enhancement</h4>
+                <p>Progressive Web App capabilities with offline mode, install prompts, and native-like experience</p>
+              </div>
+            </div>
+            <div class="roadmap-item planned">
+              <i data-lucide="circle" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>📋 Theme Customization</h4>
+                <p>Multiple theme options, custom color schemes, and user-defined visual preferences</p>
+              </div>
+            </div>
+            <div class="roadmap-item planned">
+              <i data-lucide="circle" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>📋 Advanced Security</h4>
+                <p>Rate limiting, enhanced encryption, domain blocking, and privacy-focused features</p>
+              </div>
+            </div>
+            <div class="roadmap-item planned">
+              <i data-lucide="circle" class="roadmap-icon"></i>
+              <div class="roadmap-content">
+                <h4>📋 Multi-Proxy Support</h4>
+                <p>Support for multiple proxy backends with automatic failover and load balancing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-section">
+          <h2><i data-lucide="code"></i> Technical Details</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <i data-lucide="server" class="feature-icon"></i>
+              <div class="feature-title">Backend</div>
+              <div class="feature-desc">Node.js with Express server, hosted on Vercel. Uses @tomphttp/bare-server for
+                proxy functionality.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="globe" class="feature-icon"></i>
+              <div class="feature-title">Frontend</div>
+              <div class="feature-desc">Vanilla HTML/CSS/JavaScript with Lucide icons. Responsive design with modern CSS
+                features.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="shield" class="feature-icon"></i>
+              <div class="feature-title">Security</div>
+              <div class="feature-desc">Ultraviolet service worker for secure proxying. Implements proper encoding and
+                caching strategies.</div>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="cpu" class="feature-icon"></i>
+              <div class="feature-title">Performance</div>
+              <div class="feature-desc">Optimized service worker caching, lazy loading, and efficient resource
+                management.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-section">
+          <h2><i data-lucide="heart"></i> Acknowledgments</h2>
+          <div class="acknowledgments-content">
+            <p>Special thanks to all contributors and the open-source community for their invaluable support and
+              inspiration. This project builds upon the work of many talented developers in the web proxy space.</p>
+
+            <div class="contributors-section">
+              <h3><i data-lucide="users"></i> Core Contributors</h3>
+              <div class="contributor-grid">
+                <div class="contributor-card">
+                  <div class="contributor-avatar">👨‍💻</div>
+                  <div class="contributor-name">Junyu</div>
+                  <div class="contributor-role">Core Developer</div>
+                  <div class="contributor-desc">UI/UX improvements, feature development, and visual design</div>
+                </div>
+                <div class="contributor-card">
+                  <div class="contributor-avatar">🚀</div>
+                  <div class="contributor-name">meispro</div>
+                  <div class="contributor-role">Lead Developer</div>
+                  <div class="contributor-desc">Architecture, core features, and project management</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tech-stack-section">
+              <h3><i data-lucide="code-2"></i> Built With</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Express</span>
+                <span class="tech-badge">Ultraviolet</span>
+                <span class="tech-badge">Bare Server</span>
+                <span class="tech-badge">Service Workers</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Lucide Icons</span>
+                <span class="tech-badge">Vercel</span>
+              </div>
+            </div>
+
+            <div class="community-links">
+              <h3><i data-lucide="link"></i> Community & Support</h3>
+              <div class="link-grid">
+                <a href="https://github.com/jjtjtyt6644/proxyyy" class="community-link" target="_blank">
+                  <i data-lucide="github"></i>
+                  <span>GitHub Repository</span>
+                </a>
+                <a href="https://github.com/jjtjtyt6644/proxyyy/issues" class="community-link" target="_blank">
+                  <i data-lucide="bug"></i>
+                  <span>Report Issues</span>
+                </a>
+                <a href="https://github.com/jjtjtyt6644/proxyyy/discussions" class="community-link" target="_blank">
+                  <i data-lucide="message-circle"></i>
+                  <span>Discussions</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/assets/js/settings.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+:root {
+  --stripe-color: #000;
+  --maincolor: var(--bg);
+}
+
+@keyframes smoothBg {
+  0% {
+    background-position: 0% 50%, 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%, 100% 50%;
+  }
+  100% {
+    background-position: 200% 50%, 200% 50%;
+  }
+}
+
+@keyframes rayRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(5deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.raysContain {
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.rays {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: absolute;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  --solid-color: rgb(70, 70, 70);
+  --stripes: repeating-linear-gradient(
+    100deg,
+    var(--stripe-color) 0%,
+    var(--stripe-color) 7%,
+    transparent 10%,
+    transparent 12%,
+    var(--stripe-color) 16%
+  );
+
+  --rainbow: repeating-linear-gradient(
+    100deg,
+    var(--solid-color) 10%,
+    var(--solid-color) 15%,
+    var(--solid-color) 20%,
+    var(--solid-color) 25%,
+    var(--solid-color) 30%
+  );
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 300%, 200%;
+  background-position: 50% 50%, 50% 50%;
+
+  filter: blur(10px) opacity(50%) saturate(200%);
+  mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
+  animation: rayRotate 20s ease-in-out infinite;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--stripes), var(--rainbow);
+    background-size: 200%, 100%;
+    animation: smoothBg 45s ease-in-out infinite;
+    background-attachment: fixed;
+    mix-blend-mode: difference;
+    filter: blur(10px) opacity(50%) saturate(200%);
+  }
+}

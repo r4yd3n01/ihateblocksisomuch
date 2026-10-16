@@ -1,0 +1,58 @@
+.shortcutsContain {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  margin: 10px 0 0 0;
+  gap: 7px;
+}
+
+.shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shortcut::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(181, 120, 255, 0.2), rgba(120, 180, 255, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.shortcut:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(181, 120, 255, 0.4);
+}
+
+.shortcut:hover::before {
+  opacity: 1;
+}
+
+.shortcut:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.shortcut img {
+  height: 80px;
+  width: 160px;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: brightness(0.95);
+}
+
+.shortcut:hover img {
+  transform: scale(1.15) rotate(2deg);
+  filter: brightness(1.1) saturate(1.2);
+}

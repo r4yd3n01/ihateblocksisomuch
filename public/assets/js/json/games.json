@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Poki",
+    "desc": "Play thousands of free online games directly in your browser. No downloads, no login necessary. Enjoy categories like Action, Racing, Puzzle and more!",
+    "link": "https://poki.com",
+    "img": "https://imgs.search.brave.com/5J3d4m_3qH8kH6X8Z4q8Y5W8a9e7d6c5b4a3Z2y1x0w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaW1tZWRpYXRl/LmNvLnVrL3Byb2R1/Y3Rpb24vdm9sYXRp/bGUvc2l0ZXMvMy8y/MDIzLzA1L3Bva2kt/bGlzdC1iZXN0LWdh/bWVzLWExNTljNzku/anBnP3F1YWxpdHk9/OTAmd2lkdGg9Njgw/JmZpdD1jcm9w"
+  },
+  {
+    "name": "Instagram",
+    "desc": "Connect with friends, share what you're up to, or see what's new from others all over the world. Explore our community where you can feel free to be yourself.",
+    "link": "https://instagram.com",
+    "img": "https://imgs.search.brave.com/M6x8Y6X8Z4q8Y5W8a9e7d6c5b4a3Z2y1x0w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9lL2U3L0lu/c3RhZ3JhbV9sb2dv/XzIwMTYuc3ZnLzEy/MDBweC1JbnN0YWdy/YW1fbG9nb18yMDE2/LnN2Zy5wbmc"
+  },
+  {
+    "name": "Snake.io",
+    "desc": "Slither through a new competitive version of Snake and survive as long as you can! Challenge your friends and try to be the biggest worm in the arena.",
+    "link": "https://snake.io",
+    "img": "https://imgs.search.brave.com/J3d4m_3qH8kH6X8Z4q8Y5W8a9e7d6c5b4a3Z2y1x0w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnwb/aW1hLmdlL2ltYWdl/L3NuYWtlLWlvLWxv/Z28ucG5n"
+  }
+]
